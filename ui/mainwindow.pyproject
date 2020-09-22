@@ -1,0 +1,4 @@
+{
+    "files": ["mainwindow.ui","nernstwindow.ui","arterialwindow.ui","ghkwindow.ui","edfwindow.ui","tempcowindow.ui","timediffusewindow.ui",
+    "bmiwindow.ui","bodyfatwindow.ui"]
+}
