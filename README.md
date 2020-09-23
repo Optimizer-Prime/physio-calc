@@ -21,7 +21,7 @@ pip install sympy
 ~~~
 
 ### Installation and Usage
-To install Physio Calc, just clone the repository to your computer and run **PhysioCalc.py** from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
+To install and use Physio Calc, just clone the repository to your computer and run **PhysioCalc.py** from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
 ~~~
 $ python PhysioCalc.py
 ~~~
