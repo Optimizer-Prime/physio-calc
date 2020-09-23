@@ -21,7 +21,18 @@ pip install sympy
 ~~~
 
 ### Installation and Usage
-To install Physio Calc, just clone the repository to your computer and run <b>main.py</b> from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
+To install Physio Calc, just clone the repository to your computer and run **main.py** from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
 ~~~
 $ python main.py
 ~~~
+
+### Screenshots
+![Main Menu](/resources/screenshots/mainmenu.png)
+
+### License
+
+Copyright (C) 2020 Stuart Clayton
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
