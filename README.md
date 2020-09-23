@@ -4,7 +4,7 @@ Perform physiological calculations and conversions, with an easy-to-use interfac
 ### Prerequisites 
 In order to run the app, you must have the prerequisites defined in **requirements.txt** installed in your environment.
 
-To install PyQt5, run one of the following commands:
+To install *PyQt5*, run one of the following commands:
 ~~~
 pip install pyqt5
 ~~~
@@ -15,7 +15,7 @@ or
 pip3 install pyqt5
 ~~~
 
-To install Sympy, run the following command:
+To install *Sympy*, run the following command:
 ~~~
 pip install sympy
 ~~~
