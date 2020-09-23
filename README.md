@@ -1,5 +1,5 @@
 # physio-calc
-Perform physiological calculations and conversions, with a simple and clean interface.
+Perform physiological calculations and conversions, with an easy-to-use interface.
 
 ### Prerequisites 
 In order to run the app, you must have the prerequisites defined in **requirements.txt** installed in your environment.
