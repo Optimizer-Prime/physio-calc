@@ -26,7 +26,7 @@ To install and use Physio Calc, just clone the repository to your computer and r
 $ python PhysioCalc.py
 ~~~
 
-Physio Calc was developed on linux and has only been tested on linux. However, if you have all requirements met, you should have no issue running it on Windows or MacOS.
+Physio Calc was developed and tested on linux (Ubuntu 20.04.1 LTS). However, if you have all requirements met, you should have no issue running it on Windows or MacOS.
 
 ### Screenshots
 ![Main Menu](/resources/screenshots/MainMenu.png)
