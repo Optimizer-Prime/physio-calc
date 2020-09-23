@@ -2,7 +2,7 @@
 Perform physiological calculations and conversions, with a simple and clean interface.
 
 ### Prerequisites 
-In order to run the app, you must have the prerequisites defined in 'requirements.txt' installed in your environment.
+In order to run the app, you must have the prerequisites defined in **requirements.txt** installed in your environment.
 
 To install PyQt5, run one of the following commands:
 ~~~
@@ -27,7 +27,9 @@ $ python main.py
 ~~~
 
 ### Screenshots
-![Main Menu](/resources/screenshots/mainmenu.png)
+![Main Menu](/resources/screenshots/MainMenu.png)
+![Nernst](/resources/screenshots/Nernst.png)
+![GHK](/resources/screenshots/GHK.png)
 
 ### License
 
