@@ -15,6 +15,10 @@ from ui.BodyfatWindow import Ui_BodyfatWindow
 from ui.ConversionWindow import Ui_ConversionWindow
 from ui.AboutWindow import Ui_AboutWindow
 
+CELSIUS_ABS_ZERO = '-273.15, absolute zero.'
+KELVIN_ABS_ZERO = '0.0, absolute zero.'
+FAHRENHEIT_ABS_ZERO = '-459.67, absolute zero.'
+
 
 class AboutWindow(QMainWindow, Ui_AboutWindow):
 
@@ -46,78 +50,78 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
     def handleConvertTemp(self):
         try:
             # celsius to fahrenheit
-            if self.temp_input_combo.currentText() == 'Celsius' and \
-                    self.temp_output_combo.currentText() == 'Fahrenheit':
+            if self.temp_input_combo.currentText() == 'Celsius' and (
+                    self.temp_output_combo.currentText() == 'Fahrenheit'):
                 celsius = float(self.temp_input.text())
                 if celsius <= -273.15:
-                    self.temp_input.setText('-273.15, absolute zero.')
+                    self.temp_input.setText(CELSIUS_ABS_ZERO)
 
                 result = conversions.celsius_to_fahrenheit(celsius)
                 self.temp_output.setText(str(result))
             # celsius to kelvin
-            elif self.temp_input_combo.currentText() == 'Celsius' and \
-                    self.temp_output_combo.currentText() == 'Kelvin':
+            elif self.temp_input_combo.currentText() == 'Celsius' and (
+                    self.temp_output_combo.currentText() == 'Kelvin'):
                 celsius = float(self.temp_input.text())
                 if celsius <= -273.15:
-                    self.temp_input.setText('-273.15, absolute zero.')
+                    self.temp_input.setText(CELSIUS_ABS_ZERO)
 
                 result = conversions.celsius_to_kelvin(celsius)
                 self.temp_output.setText(str(result))
             # kelvin to celsius
-            elif self.temp_input_combo.currentText() == 'Kelvin' and \
-                    self.temp_output_combo.currentText() == 'Celsius':
+            elif self.temp_input_combo.currentText() == 'Kelvin' and (
+                    self.temp_output_combo.currentText() == 'Celsius'):
                 kelvin = float(self.temp_input.text())
                 if kelvin <= 0.0:
-                    self.temp_input.setText('0.0, absolute zero.')
+                    self.temp_input.setText(KELVIN_ABS_ZERO)
 
                 result = conversions.kelvin_to_celsius(kelvin)
                 self.temp_output.setText(str(result))
             # kelvin to fahrenheit
-            elif self.temp_input_combo.currentText() == 'Kelvin' and \
-                    self.temp_output_combo.currentText() == 'Fahrenheit':
+            elif self.temp_input_combo.currentText() == 'Kelvin' and (
+                    self.temp_output_combo.currentText() == 'Fahrenheit'):
                 kelvin = float(self.temp_input.text())
                 if kelvin <= 0.0:
-                    self.temp_input.setText('0.0, absolute zero.')
+                    self.temp_input.setText(KELVIN_ABS_ZERO)
 
                 result = conversions.kelvin_to_fahrenheit(kelvin)
                 self.temp_output.setText(str(result))
             # fahrenheit to celsius
-            elif self.temp_input_combo.currentText() == 'Fahrenheit' and \
-                    self.temp_output_combo.currentText() == 'Celsius':
+            elif self.temp_input_combo.currentText() == 'Fahrenheit' and (
+                    self.temp_output_combo.currentText() == 'Celsius'):
                 fahrenheit = float(self.temp_input.text())
                 if fahrenheit <= -459.67:
-                    self.temp_input.setText('-459.67, absolute zero.')
+                    self.temp_input.setText(FAHRENHEIT_ABS_ZERO)
 
                 result = conversions.fahrenheit_to_celsius(fahrenheit)
                 self.temp_output.setText(str(result))
             # fahrenheit to kelvin
-            elif self.temp_input_combo.currentText() == 'Fahrenheit' and \
-                    self.temp_output_combo.currentText() == 'Kelvin':
+            elif self.temp_input_combo.currentText() == 'Fahrenheit' and (
+                    self.temp_output_combo.currentText() == 'Kelvin'):
                 fahrenheit = float(self.temp_input.text())
                 if fahrenheit <= -459.67:
-                    self.temp_input.setText('-459.67, absolute zero.')
+                    self.temp_input.setText(FAHRENHEIT_ABS_ZERO)
 
                 result = conversions.fahrenheit_to_kelvin(fahrenheit)
                 self.temp_output.setText(str(result))
-            elif self.temp_input_combo.currentText() == 'Celsius' and \
-                    self.temp_output_combo.currentText() == 'Celsius':
+            elif self.temp_input_combo.currentText() == 'Celsius' and (
+                    self.temp_output_combo.currentText() == 'Celsius'):
                 if float(self.temp_input.text()) <= -273.15:
-                    self.temp_input.setText('-273.15, absolute zero.')
-                    self.temp_output.setText('-273.15, absolute zero.')
+                    self.temp_input.setText(CELSIUS_ABS_ZERO)
+                    self.temp_output.setText(CELSIUS_ABS_ZERO)
                 elif float(self.temp_input.text()) > -273.15:
                     self.temp_output.setText(self.temp_input.text())
-            elif self.temp_input_combo.currentText() == 'Kelvin' and \
-                    self.temp_output_combo.currentText() == 'Kelvin':
+            elif self.temp_input_combo.currentText() == 'Kelvin' and (
+                    self.temp_output_combo.currentText() == 'Kelvin'):
                 if float(self.temp_input.text()) <= 0.0:
-                    self.temp_input.setText('0.0, absolute zero.')
-                    self.temp_output.setText('0.0, absolute zero.')
+                    self.temp_input.setText(KELVIN_ABS_ZERO)
+                    self.temp_output.setText(KELVIN_ABS_ZERO)
                 elif float(self.temp_input.text()) > 0.0:
                     self.temp_output.setText(self.temp_input.text())
-            elif self.temp_input_combo.currentText() == 'Fahrenheit' and \
-                    self.temp_output_combo.currentText() == 'Fahrenheit':
+            elif self.temp_input_combo.currentText() == 'Fahrenheit' and (
+                    self.temp_output_combo.currentText() == 'Fahrenheit'):
                 if float(self.temp_input.text()) <= -459.67:
-                    self.temp_input.setText('-459.67, absolute zero.')
-                    self.temp_output.setText('-459.67, absolute zero.')
+                    self.temp_input.setText(FAHRENHEIT_ABS_ZERO)
+                    self.temp_output.setText(FAHRENHEIT_ABS_ZERO)
                 elif float(self.temp_input.text()) > -459.67:
                     self.temp_output.setText(self.temp_input.text())
         except ValueError:
@@ -131,8 +135,8 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
         try:
             error = 'Error: negative weight.'
             # pound to gram
-            if self.mass_input_combo.currentText() == 'Pound' and \
-                    self.mass_output_combo.currentText() == 'Gram':
+            if self.mass_input_combo.currentText() == 'Pound' and (
+                    self.mass_output_combo.currentText() == 'Gram'):
                 pound = float(self.mass_input.text())
                 if pound < 0:
                     self.mass_input.setText(error)
@@ -140,8 +144,8 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
                 result = conversions.pound_to_gram(pound)
                 self.mass_output.setText(str(result))
             # pound to kilogram
-            elif self.mass_input_combo.currentText() == 'Pound' and \
-                    self.mass_output_combo.currentText() == 'Kilogram':
+            elif self.mass_input_combo.currentText() == 'Pound' and (
+                    self.mass_output_combo.currentText() == 'Kilogram'):
                 pound = float(self.mass_input.text())
                 if pound < 0:
                     self.mass_input.setText(error)
@@ -149,8 +153,8 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
                 result = conversions.pound_to_kilogram(pound)
                 self.mass_output.setText(str(result))
             # gram to pound
-            elif self.mass_input_combo.currentText() == 'Gram' and \
-                    self.mass_output_combo.currentText() == 'Pound':
+            elif self.mass_input_combo.currentText() == 'Gram' and (
+                    self.mass_output_combo.currentText() == 'Pound'):
                 gram = float(self.mass_input.text())
                 if gram < 0:
                     self.mass_input.setText(error)
@@ -158,8 +162,8 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
                 result = conversions.gram_to_pound(gram)
                 self.mass_output.setText(str(result))
             # gram to kilogram
-            elif self.mass_input_combo.currentText() == 'Gram' and \
-                    self.mass_output_combo.currentText() == 'Kilogram':
+            elif self.mass_input_combo.currentText() == 'Gram' and (
+                    self.mass_output_combo.currentText() == 'Kilogram'):
                 gram = float(self.mass_input.text())
                 if gram < 0:
                     self.mass_input.setText(error)
@@ -167,8 +171,8 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
                 result = conversions.gram_to_kilogram(gram)
                 self.mass_output.setText(str(result))
             # kilogram to gram
-            elif self.mass_input_combo.currentText() == 'Kilogram' and \
-                    self.mass_output_combo.currentText() == 'Gram':
+            elif self.mass_input_combo.currentText() == 'Kilogram' and (
+                    self.mass_output_combo.currentText() == 'Gram'):
                 kilogram = float(self.mass_input.text())
                 if kilogram < 0:
                     self.mass_input.setText(error)
@@ -176,30 +180,30 @@ class ConversionWindow(QMainWindow, Ui_ConversionWindow):
                 result = conversions.kilogram_to_gram(kilogram)
                 self.mass_output.setText(str(result))
             # kilogram to pound
-            elif self.mass_input_combo.currentText() == 'Kilogram' and \
-                    self.mass_output_combo.currentText() == 'Pound':
+            elif self.mass_input_combo.currentText() == 'Kilogram' and (
+                    self.mass_output_combo.currentText() == 'Pound'):
                 kilogram = float(self.mass_input.text())
                 if kilogram < 0:
                     self.mass_input.setText(error)
 
                 result = conversions.kilogram_to_pound(kilogram)
                 self.mass_output.setText(str(result))
-            elif self.mass_input_combo.currentText() == 'Pound' and \
-                    self.mass_output_combo.currentText() == 'Pound':
+            elif self.mass_input_combo.currentText() == 'Pound' and (
+                    self.mass_output_combo.currentText() == 'Pound'):
                 if float(self.mass_input.text()) < 0:
                     self.mass_input.setText(error)
                     self.mass_output.setText(error)
                 elif float(self.mass_input.text()) >= 0:
                     self.mass_output.setText(self.mass_input.text())
-            elif self.mass_input_combo.currentText() == 'Gram' and \
-                    self.mass_output_combo.currentText() == 'Gram':
+            elif self.mass_input_combo.currentText() == 'Gram' and (
+                    self.mass_output_combo.currentText() == 'Gram'):
                 if float(self.mass_input.text()) < 0:
                     self.mass_input.setText(error)
                     self.mass_output.setText(error)
                 elif float(self.mass_input.text()) >= 0:
                     self.mass_output.setText(self.mass_input.text())
-            elif self.mass_input_combo.currentText() == 'Kilogram' and \
-                    self.mass_output_combo.currentText() == 'Kilogram':
+            elif self.mass_input_combo.currentText() == 'Kilogram' and (
+                    self.mass_output_combo.currentText() == 'Kilogram'):
                 if float(self.mass_input.text()) < 0:
                     self.mass_input.setText(error)
                     self.mass_output.setText(error)
