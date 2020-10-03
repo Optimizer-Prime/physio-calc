@@ -21,12 +21,42 @@ pip install sympy
 ~~~
 
 ### Installation and Usage
-To install and use Physio Calc, just clone the repository to your computer and run **PhysioCalc.py** from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
+To install and use Physio Calc, you have two options.
+
+1.) Just clone the repository to your computer and run **PhysioCalc.py** from your terminal. Alternatively, run it from an IDE of your choice, such as PyCharm.
 ~~~
 $ python PhysioCalc.py
 ~~~
 
+2.) You can download the executable from the *releases* page and try running that. It was built using PyInstaller and Python 3.6.12.
+
 Physio Calc was developed and tested on linux (Ubuntu 20.04.1 LTS). However, if you have all requirements met, you should have no issue running it on Windows or MacOS.
+
+### Building from source
+If you wish to build an executable yourself from the source code provided you can do so as outlined here.
+
+1.) Install PyInstaller into your environment (that also has PyQt5 and Sympy). I highly recommend making a Conda environment with those packages installed and using Python 3.6 for best results. Switch to that environment in your terminal and run the following command.
+~~~
+pip install pyinstaller
+~~~
+
+2.) Create a spec file in the root project directory by running the following command that will use --onefile mode, to include all files in a single executable.
+~~~
+pyi-makespec --onefile PhysioCalc.py
+~~~
+
+Add the following lines of code to the beginning of the **PhysioCalc.spec** file. If you do not, you will likely encounter a recursion error.
+~~~
+# -*- mode: python ; coding: utf-8 -*-
+import sys
+sys.setrecursionlimit(5000)
+~~~
+
+3.) Build the executable.
+~~~
+pyinstall PhysioCalc.spec
+~~~
+A *build* and *dist* folder will be created. The executable is located under *dist* with the name **PhysioCalc**.
 
 ### Screenshots
 ![Main Menu](/screenshots/MainMenu.png)
