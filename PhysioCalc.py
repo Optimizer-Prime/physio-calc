@@ -15,6 +15,7 @@ from ui.BodyfatWindow import Ui_BodyfatWindow
 from ui.ConversionWindow import Ui_ConversionWindow
 from ui.AboutWindow import Ui_AboutWindow
 
+# Used in conversion window class
 CELSIUS_ABS_ZERO = '-273.15, absolute zero.'
 KELVIN_ABS_ZERO = '0.0, absolute zero.'
 FAHRENHEIT_ABS_ZERO = '-459.67, absolute zero.'
