@@ -54,7 +54,7 @@ sys.setrecursionlimit(5000)
 
 3.) Build the executable.
 ~~~
-pyinstall PhysioCalc.spec
+pyinstaller PhysioCalc.spec
 ~~~
 A *build* and *dist* folder will be created. The executable is located under *dist* with the name **PhysioCalc**.
 
