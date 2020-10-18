@@ -28,7 +28,7 @@ To install and use Physio Calc, you have two options.
 $ python PhysioCalc.py
 ~~~
 
-2.) You can download the executable from the *releases* page and try running that. It was built using PyInstaller and Python 3.6.12.
+2.) You can download the executable from the *releases* page. It was built using PyInstaller and Python 3.6.12.
 
 Physio Calc was developed and tested on linux (Ubuntu 20.04.1 LTS). However, if you have all requirements met, you should have no issue running it on Windows or MacOS.
 
