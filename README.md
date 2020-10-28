@@ -1,5 +1,5 @@
 
-![version](https://img.shields.io/badge/Version-1.0.0-blue) ![maintained](https://img.shields.io/badge/Maintained%3F-No-red) ![issues](https://img.shields.io/github/issues/Optimizer-Prime/physio-calc) ![forks](https://img.shields.io/github/forks/Optimizer-Prime/physio-calc) ![stars](https://img.shields.io/github/stars/Optimizer-Prime/physio-calc) ![licence](https://img.shields.io/github/license/Optimizer-Prime/physio-calc)
+![version](https://img.shields.io/badge/Version-1.0.0-blue) ![maintained](https://img.shields.io/badge/Maintained%3F-No-red) ![licence](https://img.shields.io/github/license/Optimizer-Prime/physio-calc)
 
 # physio-calc
 Perform physiological calculations and conversions, with an easy-to-use interface.
